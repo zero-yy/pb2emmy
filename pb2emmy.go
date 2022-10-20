@@ -111,7 +111,8 @@ func (m *pb2emmy) pbType2Lua(t string) (luaType string) {
 		return "number"
 	}
 
-	return t
+	// 约定代码，加一个前缀
+	return "Pb" + t
 }
 
 //////////////////////////////////
