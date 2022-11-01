@@ -16,6 +16,8 @@ var __pbType2Lua = map[string]string{
 	"float64": "number",
 	"float":   "number",
 	//
+	"double": "number",
+	//
 	"string": "string",
 	//
 	"bool": "boolean",
