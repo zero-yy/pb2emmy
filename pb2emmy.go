@@ -127,3 +127,10 @@ func (m *pb2emmy) VisitNormalField(i *proto.NormalField) {
 	}
 	m.fieldDes = append(m.fieldDes, field)
 }
+
+func (m *pb2emmy) VisitMapField(i *proto.MapField) {
+	k := m.pbType2Lua(i.KeyType)
+	v := m.pbType2Lua(i.Type)
+	field := fmt.Sprintf("%s:table<%s,%s>", i.Name, k, v)
+	m.fieldDes = append(m.fieldDes, field)
+}
